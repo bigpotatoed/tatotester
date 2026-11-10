@@ -1,0 +1,256 @@
+/* ===========================
+Base layout
+=========================== */
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url("background.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+
+footer{
+    text-align: right;
+    margin: 20px 15px 30px;
+    background-color: transparent;
+    border-top: 1px solid #CBD8D4;
+    padding-top: 15px;
+    padding-right: 15px;
+}
+
+.page {
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+}
+
+.center-absolute {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-area {
+    width: 100%;
+    height: 20vh;
+    text-align: center;
+    font-size: 48px;      /* matches the Recording Time heading */
+    font-weight: bold;
+}
+
+.below-ui {
+    padding-top: 40vh; 
+}
+
+.container {
+    display: flex;
+    flex-direction: column;     /* vertical stack */
+    justify-content: center;    /* centre vertically */
+    align-items: center;        /* centre horizontally */
+    height: 100vh;              /* full screen height */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;                  /* spacing between fields */
+    background: rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;               /* fixed form width */
+}
+
+.contact-link {
+    font-weight: bold;
+}
+
+/* ===========================
+Shared image styles
+=========================== */
+.img-nonselect {
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-select: none;
+    display: block;
+}
+
+/* centred images (displayImg, answerDisplayImg) */
+.img-center {
+    width: 80%;
+    margin: auto;
+}
+
+/* header image */
+#heading {
+    width: 80%;
+}
+
+#displayImg{
+    width: 100%;
+    margin: auto;
+}
+
+/* ===========================
+Buttons
+=========================== */
+.btn-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+}
+
+.btn-base {
+    background: transparent;
+    border: none;
+    padding: 0;
+    display: block;
+    -webkit-tap-highlight-color: transparent;
+}
+
+#gameStartBtn {
+    width: 70%;
+    margin-left: auto;
+    display: block;
+}
+
+#recBtn {
+    width: 30%;
+    margin: auto;
+}
+
+#playBtn {
+    width: 60%;
+    margin: auto;
+}
+
+#playingAudio {
+    padding: 50px 0;
+}
+
+button:disabled {
+    filter: saturate(0.1);
+    cursor: not-allowed;
+}
+
+/* ===========================
+Text images (strings)
+=========================== */
+.strings-center {
+    width: 100%;
+    margin: 0;
+    pointer-events: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-select: none;
+    display: block;
+}
+
+/* ===========================
+Page-specific positioning
+=========================== */
+#titleStrings {
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+#transitionStrings {
+    position: absolute;
+    top: 41%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#gameStartStrings {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#finishStrings {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#promotionStrings {
+    margin-top: 40px;
+}
+
+#logoImg {
+    margin-top: 30px;
+    width: 30%;
+}
+
+/* ===========================
+Two-column layout
+=========================== */
+.twoBtn {
+    position: absolute;
+    bottom: 5vh;
+    width: 100%;
+    display: flex;
+}
+
+.twoBtnItem {
+    width: 50%;
+    background: transparent;
+    border: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.twoBtnItem img {
+    width: 100%;
+    height: auto;
+    pointer-events: none;
+}
+
+.two-images-link {
+    display: flex;
+    justify-content: center; 
+    gap: 10px;               
+    width: 100%;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.img-link img {
+    width: 80%;             
+    height: auto;
+    margin: auto;
+    display: block;
+    cursor: pointer;       
+}
+
+.img-caption {
+    margin-top: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* ===========================
+Next button
+=========================== */
+#answerNextBtn {
+    width: 30%;
+    text-align: right;
+    margin-left: auto;
+    background: transparent !important;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    user-select: none;
+    -moz-user-select: none;
+    outline: none;
+    display: block;
+}

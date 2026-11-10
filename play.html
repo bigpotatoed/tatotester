@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OZIVO &amp; ZOOVO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="recordingPage" class="page" onclick="recBtnClick()">
+        <div class="header-area">
+            <img id="heading" class="img-nonselect" src="headBefore.png" alt="heading">
+        </div>
+
+        <img class="strings-center img-nonselect" src="strings1.png" alt="hoge">
+
+        <img id="displayImg" class="img-center img-nonselect center-absolute" src="" alt="">
+        
+        <div class="below-ui">
+            <button id="recBtn" class="btn-base">
+                <img src="recBtn.png" class="btn-img" alt="Record button">
+            </button>
+
+            <img id="recStrings" class="strings-center img-nonselect" src="strings2Before.png" alt="">
+        </div>
+    </div> 
+
+    <div id="transitionPage" class="page" style="display: none;">
+        <img id="transitionStrings" class="strings-center img-nonselect" src="strings3.png" alt="recComplete!">
+
+        <div class="twoBtn">
+            <button id="returnBtnTransition" class="twoBtnItem btn-base" onclick="returnBeforeRecording()">
+                <img src="return.png" class="btn-img" alt="Back">
+            </button>
+        
+            <button id="transitionNextBtn" class="twoBtnItem btn-base" onclick="goNextRecording()">
+                <img src="next.png" class="btn-img" alt="Next">
+            </button>
+        </div>
+    </div>
+
+    <div id="gameStartUI" class="page" style="display: none;">
+        <img id="gameStartStrings" class="strings-center img-nonselect" src="strings4.png" alt="recComplete!">
+
+        <div class="twoBtn">
+            <button id="returnBtnTransition" class="twoBtnItem btn-base" onclick="returnBeforeRecording()">
+                <img src="return.png" class="btn-img" alt="Back">
+            </button>
+        
+            <button id="transitionNextBtn" class="twoBtnItem btn-base" onclick="goAnswerPage()">
+                <img src="next.png" class="btn-img" alt="Next">
+            </button>
+        </div>
+    </div>
+
+    <div id="answerPage" class="page" style="display: none;">
+        <div id="answerCounter" class="header-area">1/24</div>
+
+        <img id="answerStrings" class="strings-center img-nonselect" src="strings5.png" alt="hoge">
+
+        <button id="playBtn" class="btn-base center-absolute" onclick="playRecording()">
+            <img src="playBtn.png" class="btn-img" alt="playingAudio">
+        </button>
+
+        <img id="answerDisplayImg" class="img-center img-nonselect center-absolute" src="" alt="" style="display: none;">
+
+        <div class="twoBtn">
+            <div class="twoBtnItem"></div> 
+
+            <button id="answerBtn" class="twoBtnItem btn-base" onclick="answerBtnClick()">
+                <img src="answerBefore.png" class="btn-img" alt="Answer">
+            </button>
+        </div>
+    </div>
+
+    <div id="finishPage" class="page" style="display: none;">
+        <img id="finishStrings" class="strings-center img-nonselect" src="strings7.png" alt="hoge">
+
+        <div class="twoBtn">
+            <button id="replayGameBtn" class="twoBtnItem btn-base" onclick="resetGame()">
+                <img src="replay.png" class="btn-img" alt="Back">
+            </button>
+        
+            <button id="transitionNextBtn" class="twoBtnItem btn-base" onclick="goPromotionPage()">
+                <img src="next.png" class="btn-img" alt="Next">
+            </button>
+        </div>
+    </div>
+
+    <div id="promotionPage" class="page" style="display: none;">
+        <img id="promotionStrings" class="strings-center img-nonselect" src="strings8.png" alt="hoge">
+
+        <div class="two-images-link">
+            <a href="https://amzn.asia/d/01ICLMwi" class="img-link">
+                <img src="ozivo.png" alt="OZIVO">
+                <p class="img-caption">▲ Buy here</p>
+            </a>
+        
+            <a href="https://amzn.asia/d/05GhNWiQ" class="img-link">
+                <img src="zoovo.png" alt="ZOOVO">
+                <p class="img-caption">▲ Buy here</p>
+            </a>
+        </div>
+
+        <img id="answerStrings" class="strings-center img-nonselect" src="strings9.png" alt="hoge">
+
+        <img id="logoImg" class="img-center img-nonselect" src="logo.png" alt="hoge">
+    </div>
+
+    <script src="recordAndPlay.js"></script>
+</body>
+<footer>
+    <a href="contact.html" class="contact-link" target="_blank">Contact</a>
+</footer>
+</html>
